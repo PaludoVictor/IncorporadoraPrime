@@ -1,0 +1,97 @@
+/* Paleta */
+:root {
+  --black: #000000;
+  --dark-gray: #181a1b;
+  --blue: #1e3a83;
+  --white: #fff;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--dark-gray);
+  color: var(--white);
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3rem;
+  background: var(--black);
+}
+.navbar .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.navbar .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+.navbar .nav-links a {
+  text-decoration: none;
+  color: var(--white);
+}
+.btn {
+  background: var(--blue);
+  color: var(--white);
+  padding: 1rem 2rem; /* aumentado */
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  display: inline-block;
+  text-align: center;
+}
+
+/* Hero */
+.hero {
+  position: relative;
+  height: 50vh; /* altura reduzida do hero */
+  /* 👉 Se quiser testar outros valores altere aqui: 40vh, 60vh... */
+  background: url('img/index.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  padding-left: 5rem;
+}
+.hero .overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.5);
+}
+.hero-text {
+  position: relative;
+  max-width: 500px;
+  z-index: 2;
+}
+.hero-text h1 {
+  font-size: 2.35rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Info Section */
+.info-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* garante alinhamento dos títulos */
+  padding: 4rem 5rem;
+  gap: 2rem; /* espaço igual entre blocos */
+}
+
+.como-funciona, .comunidade {
+  flex: 1; /* os dois blocos ocupam o mesmo tamanho */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.como-funciona h2, .comunidade h2 {
+  margin-bottom: 1rem;
+}
+
+.como-funciona .btn, .comunidade .btn {
+  margin-top: auto; /* botão sempre “cola” embaixo do bloco */
+  align-self: flex-start; /* alinhado na mesma linha esquerda */
+}

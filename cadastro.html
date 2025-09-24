@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro - StealPrime</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="form-container">
+    <h1>Bem vindo!</h1>
+    <p>Para agilizar a abertura da conta, tenha um documento em mãos.</p>
+
+    <form action="https://formsubmit.co/seuemail@email.com" method="POST">
+      <!-- Redireciona após sucesso -->
+      <input type="hidden" name="_next" value="index.html">
+      <input type="hidden" name="_autoresponse" value="Obrigado pelo cadastro! Avisaremos quando a plataforma estiver finalizada.">
+
+      <label>Nome completo</label>
+      <input type="text" name="nome" required>
+
+      <label>Data de nascimento</label>
+      <input type="date" name="nascimento" required>
+
+      <label>CPF</label>
+      <input type="text" name="cpf" required>
+
+      <label>E-mail</label>
+      <input type="email" name="email" required>
+
+      <label>Telefone</label>
+      <input type="tel" name="telefone">
+
+      <label>Endereço</label>
+      <input type="text" name="endereco">
+
+      <label>
+        <input type="checkbox" name="termos" required> Li e concordo com os termos
+      </label>
+
+      <button type="submit" class="btn">Continuar</button>
+    </form>
+  </div>
+</body>
+</html>
