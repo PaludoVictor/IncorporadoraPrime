@@ -21,9 +21,8 @@ body {
   padding: 1rem 3rem;
   background: var(--black);
 }
-.navbar .logo {
-  font-size: 1.5rem;
-  font-weight: bold;
+.navbar .logo-img {
+  height: 40px; /* Ajuste a altura da sua logo */
 }
 .navbar .nav-links {
   list-style: none;
@@ -37,8 +36,8 @@ body {
 .btn {
   background: var(--blue);
   color: var(--white);
-  padding: 1rem 2rem; /* aumentado */
-  border-radius: 5px;
+  padding: 1rem 2rem;
+  border-radius: 10px; /* Botões mais arredondados */
   text-decoration: none;
   font-weight: bold;
   font-size: 1rem;
@@ -46,11 +45,15 @@ body {
   text-align: center;
 }
 
+.btn-nav {
+  padding: 0.8rem 1.5rem; /* Botão do nav menor */
+  font-size: 0.9rem;
+}
+
 /* Hero */
 .hero {
   position: relative;
-  height: 50vh; /* altura reduzida do hero */
-  /* 👉 Se quiser testar outros valores altere aqui: 40vh, 60vh... */
+  height: 50vh;
   background: url('img/index.jpg') center/cover no-repeat;
   display: flex;
   align-items: center;
@@ -75,13 +78,13 @@ body {
 .info-section {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start; /* garante alinhamento dos títulos */
+  align-items: flex-start;
   padding: 4rem 5rem;
-  gap: 2rem; /* espaço igual entre blocos */
+  gap: 2rem;
 }
 
 .como-funciona, .comunidade {
-  flex: 1; /* os dois blocos ocupam o mesmo tamanho */
+  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -92,6 +95,68 @@ body {
 }
 
 .como-funciona .btn, .comunidade .btn {
-  margin-top: auto; /* botão sempre “cola” embaixo do bloco */
-  align-self: flex-start; /* alinhado na mesma linha esquerda */
+  margin-top: auto;
+  align-self: flex-start;
+}
+
+/* Comunidade Cards */
+.comunidade .cards {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.comunidade .card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.comunidade .card img {
+  width: 100px; /* Ajuste o tamanho das imagens */
+  height: 100px;
+  margin-bottom: 0.5rem;
+  background-color: #333; /* Fundo para as imagens */
+  border-radius: 10px;
+}
+
+
+/* Responsividade para Celular */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 1rem;
+  }
+  .navbar .nav-links {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    gap: 1.5rem;
+  }
+  .hero {
+    padding-left: 2rem;
+    height: 40vh;
+  }
+  .hero-text h1 {
+    font-size: 1.8rem;
+  }
+  .info-section {
+    flex-direction: column;
+    padding: 2rem;
+  }
+  .como-funciona, .comunidade {
+    align-items: center;
+    text-align: center;
+  }
+  .como-funciona .btn, .comunidade .btn {
+    align-self: center;
+  }
+  .comunidade .cards {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .comunidade .card {
+    flex-basis: 45%;
+  }
 }
