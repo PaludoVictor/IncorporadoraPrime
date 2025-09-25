@@ -309,3 +309,158 @@ body {
 .checkbox-container {
   display: none;
 }
+
+/* --- Estilos da Página de Contato e Footer --- */
+
+/* Container Principal */
+.contact-container {
+  max-width: 1200px;
+  margin: 4rem auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.contact-container h1 {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: var(--white);
+}
+
+.team {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.team-member {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  text-align: left;
+}
+
+/* Alinhamento alternado */
+.team-member.cto {
+  align-self: flex-end; /* Joga o CTO para a direita */
+  flex-direction: row-reverse; /* Inverte a ordem: texto antes da foto */
+  text-align: right;
+}
+
+.team-member.ceo, .team-member.cfo {
+  align-self: flex-start; /* Mantém CEO e CFO na esquerda */
+}
+
+.member-photo img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%; /* Deixa a foto redonda */
+  object-fit: cover;
+  border: 4px solid var(--blue);
+}
+
+.member-info h3 {
+  font-size: 1.8rem;
+  margin: 0 0 0.5rem 0;
+}
+
+.member-info p {
+  color: #ccc;
+  margin: 0 0 1rem 0;
+}
+
+.linkedin-link {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.linkedin-link .fa-linkedin {
+  font-size: 1.5rem;
+  color: #0e76a8;
+}
+
+/* Footer */
+.footer {
+  background-color: var(--black);
+  color: var(--white);
+  padding: 3rem 2rem 1rem;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.footer-logo, .footer-links, .footer-contact {
+  flex: 1;
+}
+
+.footer-logo p {
+  color: #ccc;
+  margin-top: 1rem;
+}
+
+.footer-links h4, .footer-contact h4 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li a {
+  color: #ccc;
+  text-decoration: none;
+  line-height: 2;
+}
+
+.footer-contact p {
+  color: #ccc;
+  margin: 0.5rem 0;
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #333;
+  padding-top: 1rem;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.whatsapp-link {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.75rem; /* Espaço entre o link do LinkedIn e do WhatsApp */
+}
+
+.whatsapp-link .fa-whatsapp {
+  font-size: 1.5rem;
+  color: #25D366; /* Cor oficial do WhatsApp */
+}
+
+/* Responsividade para Contato e Footer */
+@media (max-width: 768px) {
+  .team-member, .team-member.cto {
+    flex-direction: column;
+    align-self: center;
+    text-align: center;
+  }
+  
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+}
