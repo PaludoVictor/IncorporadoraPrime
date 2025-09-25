@@ -58,17 +58,18 @@ body {
   background: url('img/index.jpg') center/cover no-repeat;
   display: flex;
   align-items: center;
-  padding-left: 5rem;
+}
+
+.hero-text {
+  position: relative;
+  max-width: 500px;
+  z-index: 2;
+  margin-left: calc((100% - 1200px) / 2 );
 }
 .hero .overlay {
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
   background: rgba(0,0,0,0.5);
-}
-.hero-text {
-  position: relative;
-  max-width: 500px;
-  z-index: 2;
 }
 .hero-text h1 {
   font-size: 2.35rem;
@@ -79,41 +80,45 @@ body {
 .info-section {
   display: flex;
   justify-content: space-between;
-  align-items: stretch; 
-  padding: 4rem 5rem;
-  gap: 2rem;
+  align-items: stretch;  /* faz as colunas terem a mesma altura */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  gap: 4rem;
 }
 
 .como-funciona, .comunidade {
   flex: 1;
   display: flex;
   flex-direction: column;
+  justify-content: space-between; /* força título+conteúdo em cima e botão embaixo */
+}
+
+.como-funciona .btn,
+.comunidade .btn {
+  align-self: flex-start;
+  margin-top: auto; /* garante que os dois botões “grudem” na base do bloco */
 }
 
 .como-funciona h2, .comunidade h2 {
   margin-bottom: 1rem;
 }
 
-/* Alinhamento dos botões */
-.como-funciona p, .comunidade .cards {
-  flex-grow: 1; /* Faz o conteúdo acima crescer para empurrar o botão para baixo */
-}
-
-.como-funciona .btn, .comunidade .btn {
-  align-self: flex-start; /* Alinha o botão à esquerda de sua coluna (alinhado com o título) */
-}
-
 
 /* Comunidade Cards */
+.comunidade h2 {
+  margin-bottom: 0.5rem; /* bem colado ao início das imagens */
+}
+
 .comunidade .cards {
   display: flex;
-  gap: 0.25rem; /* Espaçamento ainda menor entre as imagens */
-  margin-bottom: 2rem;
-  padding-left: 0; 
+  justify-content: flex-start;
+  gap: 1.5rem; /* espaçamento menor entre as imagens */
+  margin-bottom: 1.5rem; /* espaço antes do botão */
 }
 
 .comunidade .card {
-  flex: 1;
+  flex: none; /* impede que estiquem demais */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -121,12 +126,13 @@ body {
 }
 
 .comunidade .card img {
-  width: 60px; /* Imagens ainda menores */
-  height: 60px; /* Imagens ainda menores */
-  margin-bottom: 0.5rem;
+  width: 60px;
+  height: 60px;
+  margin-bottom: 0.25rem; /* aproxima texto Bronze/Prata/etc da imagem */
   background-color: #333;
   border-radius: 10px;
 }
+
 
 
 /* Responsividade para Celular */
@@ -154,6 +160,7 @@ body {
   .como-funciona, .comunidade {
     align-items: center;
     text-align: center;
+    max-width: 100%;
   }
   .como-funciona .btn, .comunidade .btn {
     align-self: center; /* Centraliza os botões no mobile */
