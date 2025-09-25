@@ -453,9 +453,16 @@ body {
 
 /* Responsividade para Contato e Footer */
 @media (max-width: 768px) {
-  .team-member, .team-member.cto {
+  .team-member {
+    /* Aplica a todos os membros no celular */
+    flex-direction: column; /* Garante que a foto fique em cima do texto */
+    align-self: center;    /* Centraliza o card do membro na página */
+    text-align: center;    /* Centraliza o texto dentro do card */
+  }
+
+  .team-member.cto {
+     /* Reseta especificamente o CTO para o padrão de celular */
     flex-direction: column;
-    align-self: center;
     text-align: center;
   }
   
