@@ -7,6 +7,14 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+  <nav class="navbar navbar-cadastro">
+    <div class="logo">
+      <a href="index.html"><img src="img/logo.png" alt="StealPrime Logo" class="logo-img"></a>
+    </div>
+    <a href="index.html" class="back-arrow">← Voltar</a>
+  </nav>
+
   <div class="form-container">
     <h1>Bem vindo!</h1>
     <hr class="title-line">
@@ -15,7 +23,9 @@
     <form action="https://formsubmit.co/seuemail@email.com" method="POST">
       <input type="hidden" name="_next" value="https://SEU-USUARIO.github.io/SEU-REPOSITORIO/obrigado.html">
       <input type="hidden" name="_autoresponse" value="Obrigado pelo cadastro! Avisaremos por e-mail quando a plataforma estiver finalizada.">
-      <input type="hidden" name="_captcha" value="false"> <div class="form-row">
+      <input type="hidden" name="_captcha" value="false">
+
+      <div class="form-row">
         <div class="form-group full-width">
           <label for="nome">Nome completo</label>
           <input type="text" id="nome" name="nome" required>
@@ -52,9 +62,6 @@
       </div>
 
       <div class="form-footer">
-        <label class="checkbox-container">
-          <input type="checkbox" name="termos" required> Li e concordo com os termos
-        </label>
         <button type="submit" class="btn">Continuar</button>
       </div>
     </form>

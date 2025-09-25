@@ -262,3 +262,33 @@ body {
     text-align: center;
   }
 }
+/* --- Ajustes Finais da Página de Cadastro --- */
+
+/* Navbar Específica da Página de Cadastro */
+.navbar-cadastro {
+  justify-content: space-between;
+}
+
+.back-arrow {
+  color: var(--white);
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+/* Campos do formulário com fundo branco */
+.form-group input {
+  background-color: var(--white); /* Fundo branco */
+  color: var(--black); /* Texto preto */
+  border: 1px solid #ccc;
+}
+
+/* Alinhamento do botão do formulário */
+.form-footer {
+  justify-content: flex-start; /* Alinha o botão à esquerda */
+}
+
+/* Remove o checkbox dos termos (se ainda houver) */
+.checkbox-container {
+  display: none;
+}
