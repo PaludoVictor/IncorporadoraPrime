@@ -147,8 +147,13 @@ body {
     gap: 1.5rem;
   }
   .hero {
-    padding-left: 2rem;
-    height: 40vh;
+    padding: 0 2rem; /* Garante espaçamento nas laterais */
+    justify-content: center; /* Centraliza o bloco de texto */
+    text-align: center; /* Centraliza o texto dentro do bloco */
+  }
+
+  .hero-text {
+    margin-left: 0; /* Remove a margem que estava empurrando o texto para fora */
   }
   .hero-text h1 {
     font-size: 1.8rem;
