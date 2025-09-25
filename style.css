@@ -58,19 +58,25 @@ body {
   background: url('img/index.jpg') center/cover no-repeat;
   display: flex;
   align-items: center;
+  /* Adicionado para controlar o alinhamento do texto */
+  justify-content: center; 
 }
 
-.hero-text {
-  position: relative;
-  max-width: 500px;
-  z-index: 2;
-  margin-left: calc((100% - 1200px) / 2 );
-}
 .hero .overlay {
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
   background: rgba(0,0,0,0.5);
 }
+
+.hero-text {
+  position: relative;
+  width: 100%; /* Ocupa toda a largura disponível */
+  max-width: 1200px; /* Limita a largura máxima do conteúdo */
+  padding: 0 2rem; /* Adiciona um respiro nas laterais */
+  z-index: 2;
+  box-sizing: border-box; /* Garante que o padding não aumente a largura total */
+}
+
 .hero-text h1 {
   font-size: 2.35rem;
   margin-bottom: 1.5rem;
@@ -147,9 +153,8 @@ body {
     gap: 1.5rem;
   }
   .hero {
-    padding: 0 2rem; /* Garante espaçamento nas laterais */
-    justify-content: center; /* Centraliza o bloco de texto */
-    text-align: center; /* Centraliza o texto dentro do bloco */
+    height: 40vh;
+    text-align: center; /* Centraliza o texto e o botão no celular */
   }
 
   .hero-text {
