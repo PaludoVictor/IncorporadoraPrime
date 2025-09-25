@@ -43,7 +43,7 @@ body {
   font-size: 1rem;
   display: inline-block;
   text-align: center;
-  box-sizing: border-box; /* Garante que o padding não afete a largura total */
+  box-sizing: border-box; 
 }
 
 .btn-nav {
@@ -79,7 +79,7 @@ body {
 .info-section {
   display: flex;
   justify-content: space-between;
-  align-items: stretch; /* Alinha os itens para terem a mesma altura */
+  align-items: stretch; 
   padding: 4rem 5rem;
   gap: 2rem;
 }
@@ -95,25 +95,21 @@ body {
 }
 
 /* Alinhamento dos botões */
-.como-funciona p {
-  flex-grow: 1; /* Faz o parágrafo crescer para empurrar o botão para baixo */
-}
-
-.comunidade .cards {
-  flex-grow: 1; /* Faz os cards crescerem para empurrar o botão para baixo */
+.como-funciona p, .comunidade .cards {
+  flex-grow: 1; /* Faz o conteúdo acima crescer para empurrar o botão para baixo */
 }
 
 .como-funciona .btn, .comunidade .btn {
-  width: 100%; /* Faz os botões ocuparem toda a largura da coluna */
+  align-self: flex-end; /* Alinha o botão à direita de sua coluna */
 }
 
 
 /* Comunidade Cards */
 .comunidade .cards {
   display: flex;
-  gap: 0.5rem; /* Espaçamento menor entre as imagens */
+  gap: 0.5rem; 
   margin-bottom: 2rem;
-  padding-left: 0; /* Alinha o início das imagens com o título */
+  padding-left: 0; 
 }
 
 .comunidade .card {
@@ -125,8 +121,8 @@ body {
 }
 
 .comunidade .card img {
-  width: 80px; /* Tamanho menor das imagens */
-  height: 80px; /* Tamanho menor das imagens */
+  width: 80px; 
+  height: 80px; 
   margin-bottom: 0.5rem;
   background-color: #333;
   border-radius: 10px;
@@ -160,7 +156,7 @@ body {
     text-align: center;
   }
   .como-funciona .btn, .comunidade .btn {
-    align-self: center;
+    align-self: center; /* Centraliza os botões no mobile */
   }
   .comunidade .cards {
     flex-wrap: wrap;
